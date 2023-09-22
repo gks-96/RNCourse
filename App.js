@@ -4,13 +4,24 @@ import { StyleSheet, Text,TextInput, View,Button } from 'react-native';
 
 export default function App() {
 
-  const[enteredGaolText,setEnteredGoalText] = useState(''); 
+  const[enteredGoalText,setEnteredGoalText] = useState(''); 
 
+  const [courseGoals,setCourseGoals] = useState([]); 
+
+  // react handles this, therefofre, we do not have to focus on passing parameter
   function goalInputHandler(enteredText){
     setEnteredGoalText(enteredText);
   }
+
   function addGoalHandler(){
-    console.log(enteredGaolText);
+    // not a best way to update state, when new state depends on previous states
+    // setCourseGoals([...courseGoals,enteredGoalText]); 
+
+    // using spread operator 
+    setCourseGoals(currentCourseGoals => [...currentCourseGoals,enteredGoalText]);
+    console.log(enteredGoalText);
+
+
   }
   return (
     <View style={styles.appContainer}>
@@ -19,7 +30,7 @@ export default function App() {
         it arranges the component in that view in the correponding way
         for example: row -> it will place it rowwise
                   and column - it will place it columnwise  */}
-            <TextInput style={styles.textInput} placeholder='Your  course goals'
+            <TextInput style={styles.textInput} placeholder='Your course goals'
             onChangeText={goalInputHandler}/>
             {/* // goalInputHandler() - evaluated when the app is evaluated
             // we want react to evaluate it, therefore, do goalInputHandler */}
@@ -30,7 +41,12 @@ export default function App() {
 
       </View>
       <View style = {styles.goalsContainer}>
-        <Text > List of Goals... </Text>
+        {/* why are we having the key prop otherwise we get the warning 
+        - each child in teh list should have a unique 'key' prop*/}
+        { courseGoals.map( (goal) => 
+        <View style={styles.goalItem}key={goal}>  
+          <Text  style={styles.goalText} > {goal}</Text> 
+         </View>)} 
       </View>
     </View>
    
@@ -62,5 +78,16 @@ const styles = StyleSheet.create({
   },
   goalsContainer:{
     flex: 5
+  },
+  goalItem:{
+    margin:8,
+    borderRadius:6,
+    // dashes are not supported in js, therefore instead of background-Color
+    // it is backgroundColor
+    backgroundColor:'#5e0acc',
+    color: 'white'
+  },
+  goalText:{
+    color:'white',
   }
 });
