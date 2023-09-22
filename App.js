@@ -1,5 +1,5 @@
 import {useState } from 'react';
-import { StyleSheet, Text,TextInput, View,Button,ScrollView } from 'react-native';
+import { StyleSheet, Text,TextInput, View,Button,ScrollView,FlatList } from 'react-native';
 // button is self enclosing tag 
 
 export default function App() {
@@ -43,14 +43,25 @@ export default function App() {
       <View style = {styles.goalsContainer}>
         {/* scrollView - allows to make content 
          scrollable  */}
-      <ScrollView  alwaysBounceVertical='false'>
-        {/* why are we having the key prop otherwise we get the warning 
+         {/* why are we having the key prop otherwise we get the warning 
         - each child in teh list should have a unique 'key' prop*/}
-        { courseGoals.map( (goal) => 
-        <View style={styles.goalItem}key={goal}>  
-          <Text  style={styles.goalText} > {goal}</Text> 
-        </View>)} 
-      </ScrollView>
+        {/* <ScrollView  alwaysBounceVertical='false'>
+          
+          { courseGoals.map( (goal) => 
+          <View style={styles.goalItem}key={goal}>  
+            <Text  style={styles.goalText} > {goal}</Text> 
+          </View>)} 
+        </ScrollView> 
+        */}
+      <FlatList data={courseGoals} renderItem={itemData => {
+        // itemData.index
+        return (
+
+          <View style={styles.goalItem}>  
+          <Text  style={styles.goalText} > { itemData.item}</Text> 
+        </View>
+        );
+      } }alwaysBounceVertical='false' />
       </View>
       
     </View>
