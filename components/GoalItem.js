@@ -1,13 +1,14 @@
 // import React from 'react '
 
-import { StyleSheet, Text,TextInput, View,Button,ScrollView,FlatList } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 
-function GoalItem(){
+function GoalItem(props){
 
 // how does GoalItem function know about the itemData ? 
+// the code worked even without the props, not sure why 
     return (
         <View style={styles.goalItem}>  
-        <Text  style={styles.goalText} > { itemData.item} </Text> 
+        <Text  style={styles.goalText} > { props.text} </Text> 
       </View>
     );
 }
