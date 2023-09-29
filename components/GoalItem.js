@@ -1,15 +1,18 @@
 // import React from 'react '
 
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View,Pressable} from 'react-native';
 
 function GoalItem(props){
 
 // how does GoalItem function know about the itemData ? 
 // the code worked even without the props, not sure why 
     return (
+      <Pressable onPress = {props.onDeleteItem}>
         <View style={styles.goalItem}>  
-        <Text  style={styles.goalText} > { props.text} </Text> 
-      </View>
+            <Text  style={styles.goalText} > { props.text}  </Text> 
+        </View>
+      </Pressable>
+      
     );
 }
 

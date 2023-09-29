@@ -8,7 +8,10 @@ import { useState } from 'react'
 export default function App() {
   
   const[courseGoals,setCourseGoals] = useState([]); 
-
+  
+  function deleteGoalHandler(){
+    console.log("delete");
+  }
   function addGoalHandler(enteredGoalText){
     // not a best way to update state, when new state depends on previous states
     // setCourseGoals([...courseGoals,enteredGoalText]); 
@@ -39,7 +42,10 @@ export default function App() {
         */}
       <FlatList data={courseGoals} renderItem={itemData => {
         // itemData.index
-        return <GoalItem text = {itemData.item.text}/>;
+        return <GoalItem 
+                text = {itemData.item.text}
+                onDeleteItem={deleteGoalHandler}
+                />;
       } }alwaysBounceVertical='false' />
       </View>
       
