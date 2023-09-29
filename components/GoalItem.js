@@ -10,11 +10,17 @@ function GoalItem(props){
 // how does GoalItem function know about the itemData ? 
 // the code worked even without the props, not sure why 
     return (
-      <Pressable onPress = {props.onDeleteItem.bind(this,props.id)}>
+     
         <View style={styles.goalItem}>  
-            <Text  style={styles.goalText} > { props.text}  </Text> 
+         <Pressable 
+           android_ripple={{color :'#210644'} }
+           onPress = {props.onDeleteItem.bind(this,props.id)}
+           style = { ( {pressed} ) => pressed && styles.pressedItem} > 
+          <Text  style={styles.goalText} > { props.text}  </Text>   
+         </Pressable>
+          
         </View>
-      </Pressable>
+      
       
     );
 }
@@ -31,6 +37,9 @@ const styles = StyleSheet.create({
       // it is backgroundColor
       backgroundColor:'#5e0acc',
       color: 'white'
+    },
+    pressedItem : {
+        opacity:0.3
     },
     goalText:{
       color:'white',
