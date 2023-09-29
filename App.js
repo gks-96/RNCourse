@@ -1,12 +1,13 @@
 import {useState } from 'react';
 import { StyleSheet, Text,TextInput, View,Button,ScrollView,FlatList } from 'react-native';
 // button is self enclosing tag 
-
+import GoalItem from './components/GoalItem';
+// custom component - good practice to start with capital 
 export default function App() {
 
   const[enteredGoalText,setEnteredGoalText] = useState(''); 
 
-  const [courseGoals,setCourseGoals] = useState([]); 
+  const[courseGoals,setCourseGoals] = useState([]); 
 
   // react handles this, therefofre, we do not have to focus on passing parameter
   function goalInputHandler(enteredText){
@@ -20,7 +21,6 @@ export default function App() {
     // using spread operator 
     setCourseGoals(currentCourseGoals => [...currentCourseGoals,enteredGoalText]);
     console.log(enteredGoalText);
-
 
   }
   return (
@@ -55,12 +55,7 @@ export default function App() {
         */}
       <FlatList data={courseGoals} renderItem={itemData => {
         // itemData.index
-        return (
-
-          <View style={styles.goalItem}>  
-          <Text  style={styles.goalText} > { itemData.item}</Text> 
-        </View>
-        );
+        return <GoalItem />;
       } }alwaysBounceVertical='false' />
       </View>
       
