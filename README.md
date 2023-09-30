@@ -40,6 +40,7 @@ Before you begin, ensure you have met the following requirements:
 
 ![Simulator Screen Recording - iPhone 13 - 2023-09-29 at 18 40 05](https://github.com/gks-96/RNCourse/assets/69946546/56b3e878-ccb7-4536-b50a-0605a6bdc6db)
 
+Note: Demo is taken on iPhone 13 simulator as provided in Xcode 
 
 ## Contributing 
 
