@@ -1,6 +1,6 @@
 # My React Native Goal Tracking App
 
-![App Screenshot](screenshot.png)
+![App Screenshot](![simulator_screenshot_CFDD5D9C-8986-4CF7-83E9-08212CBA1B6B](https://github.com/gks-96/RNCourse/assets/69946546/079ee7a0-c53e-4b87-a9a5-149db4a05a52))
 
 
 This is a simple React Native application for tracking your course goals. You can add and manage your goals with ease.
@@ -26,7 +26,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository to your local machine:
 
-    Command : git clone https://github.com/academind/react-native-practical-guide-code.git
+    Command: git clone https://github.com/academind/react-native-practical-guide-code.git
 
 2. Change into the project directory:
 
@@ -38,6 +38,9 @@ Before you begin, ensure you have met the following requirements:
 
 
 ## Working/Features 
+
+
+![Simulator Screen Recording - iPhone 13 - 2023-09-29 at 18 40 05](https://github.com/gks-96/RNCourse/assets/69946546/56b3e878-ccb7-4536-b50a-0605a6bdc6db)
 
 
 ## Contributing 
