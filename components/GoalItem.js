@@ -28,16 +28,17 @@ const styles = StyleSheet.create({
     goalItem:{
       margin:8,
       borderRadius:6,
+      
       // dashes are not supported in js, therefore instead of background-Color
       // it is backgroundColor
       backgroundColor:'#E0B0FF',
-      color: 'white'
+      color: 'black'
     },
     pressedItem : {
         opacity:0.3
     },
     goalText:{
-      color:'white',
+      color:'black',
     }
   });
   
