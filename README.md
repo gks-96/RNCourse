@@ -40,8 +40,10 @@ Before you begin, ensure you have met the following requirements:
 
 ![Simulator Screen Recording - iPhone 13 - 2023-09-29 at 18 40 05](https://github.com/gks-96/RNCourse/assets/69946546/56b3e878-ccb7-4536-b50a-0605a6bdc6db)
 
-Note: Demo is taken on iPhone 13 simulator as provided in Xcode 
-
+Note:  
+1. Demo is taken on iPhone 13 simulator as provided in Xcode 
+2. Removal of the last Goal "Finish Machine Learning Assignment " is done when the person clicks on the goals
+   
 ## Contributing 
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
