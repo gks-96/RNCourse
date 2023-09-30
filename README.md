@@ -1,6 +1,6 @@
 # My React Native Goal Tracking App
 
-![App Screenshot](![simulator_screenshot_CFDD5D9C-8986-4CF7-83E9-08212CBA1B6B](https://github.com/gks-96/RNCourse/assets/69946546/079ee7a0-c53e-4b87-a9a5-149db4a05a52))
+![App Screenshot](https://github.com/gks-96/RNCourse/assets/69946546/85d0db4e-e998-4c4d-97b4-971fcf99ae19)
 
 
 This is a simple React Native application for tracking your course goals. You can add and manage your goals with ease.
