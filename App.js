@@ -3,6 +3,8 @@ import { StyleSheet, View, FlatList, Button } from "react-native";
 import GoalItem from "./components/GoalItem";
 import GoalInput from "./components/GoalInput";
 import { useState } from "react";
+import {StatusBar} from 'expo-status-bar'
+
 // custom component - good practice to start with capital
 export default function App() {
   const [courseGoals, setCourseGoals] = useState([]);
@@ -37,6 +39,8 @@ export default function App() {
     endAddGoalHandler();
   }
   return (
+    <>
+    <StatusBar style = 'light' />
     <View style={styles.appContainer}>
       <Button
         title="Add new Goal"
@@ -78,11 +82,13 @@ export default function App() {
         />
       </View>
     </View>
+    </>
   );
 }
 // styling
 const styles = StyleSheet.create({
   appContainer: {
+    backgroundColor: "#A865B5",
     flex: 1,
     padding: 50,
     paddingHorizontal: 16,

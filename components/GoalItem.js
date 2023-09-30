@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
       borderRadius:6,
       // dashes are not supported in js, therefore instead of background-Color
       // it is backgroundColor
-      backgroundColor:'#5e0acc',
+      backgroundColor:'#E0B0FF',
       color: 'white'
     },
     pressedItem : {
